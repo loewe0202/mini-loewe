@@ -41,7 +41,9 @@
     "test:h5": "cross-env UNI_PLATFORM=h5 jest -i",
     "test:ios": "cross-env UNI_PLATFORM=app-plus UNI_OS_NAME=ios jest -i",
     "test:mp-baidu": "cross-env UNI_PLATFORM=mp-baidu jest -i",
-    "test:mp-weixin": "cross-env UNI_PLATFORM=mp-weixin jest -i"
+    "test:mp-weixin": "cross-env UNI_PLATFORM=mp-weixin jest -i",
+    "qr-test:mp-weixin": "cross-env UNI_PLATFORM=mp-weixin node preview.wx.js",
+    "qr-test:mp-alipay": "cross-env UNI_PLATFORM=mp-alipay node preview.ali.js"
   },
   "dependencies": {
     "@dcloudio/uni-app-plus": "^2.0.1-32920211122003",
@@ -60,9 +62,9 @@
     "@dcloudio/uni-quickapp-native": "^2.0.1-32920211122003",
     "@dcloudio/uni-quickapp-webview": "^2.0.1-32920211122003",
     "@dcloudio/uni-stat": "^2.0.1-32920211122003",
+    "@vue/babel-preset-app": "^4.5.15",
     "@vue/shared": "^3.0.0",
     "core-js": "^3.6.5",
-    "flyio": "^0.6.2",
     "minidev": "^1.1.3",
     "miniprogram-ci": "^1.6.10",
     "regenerator-runtime": "^0.12.1",
@@ -88,14 +90,18 @@
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-typescript": "*",
     "@vue/cli-service": "~4.5.0",
+    "babel-loader": "^8.2.3",
     "babel-plugin-import": "^1.11.0",
     "cross-env": "^7.0.2",
     "jest": "^25.4.0",
     "mini-types": "*",
     "miniprogram-api-typings": "*",
     "postcss-comment": "^2.0.0",
+    "sass": "^1.45.0",
+    "sass-loader": "10",
     "typescript": "^3.0.0",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "webpack-bundle-analyzer": "^4.5.0"
   },
   "browserslist": [
     "Android >= 4.4",
