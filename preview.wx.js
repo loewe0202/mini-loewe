@@ -16,6 +16,8 @@ const ci = require('miniprogram-ci');
     urlCheck: false,
     ignoreHttpDomainCheck: true,
     ignoreWebViewDomainCheck: true,
+    // 指定使用哪一个 ci 机器人，可选值：1 ~ 30，通过不同机器人可以生成不同的分支功能的预览二维码
+    robot: 1,
     setting: {
       es6: true,
       urlCheck: false,
